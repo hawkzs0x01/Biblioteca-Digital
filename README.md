@@ -1,8 +1,10 @@
-# 📚 Biblioteca Digital - Sistema de Gerenciamentog
+# 📚 Biblioteca Digital - Sistema de Gerenciamento
 
 > Um projeto full-stack desenvolvido como solução para o desafio de modernização de bibliotecas, utilizando Java com Spring Boot no back-end e JavaScript puro no front-end.
 
 **Status do Projeto: Concluído ✔️**
+
+
 
 ---
 
@@ -13,6 +15,8 @@ Este projeto foi desenvolvido para atender ao desafio de criar um sistema de ger
 O objetivo é demonstrar como tecnologias web modernas podem resolver problemas crônicos de gestão manual, otimizando o trabalho dos bibliotecários e oferecendo uma experiência mais rica e autônoma para os leitores.
 
 ---
+
+
 
 ### Funcionalidades
 
@@ -28,6 +32,8 @@ O objetivo é demonstrar como tecnologias web modernas podem resolver problemas 
 
 ---
 
+
+
 ### Tecnologias Utilizadas
 
 O projeto foi construído com as seguintes tecnologias:
@@ -40,9 +46,13 @@ O projeto foi construído com as seguintes tecnologias:
 
 ---
 
+
+
 ### Como Executar o Projeto
 
 Siga os passos abaixo para configurar e executar o projeto em seu ambiente local.
+
+
 
 #### **Pré-requisitos**
 
@@ -51,6 +61,8 @@ Antes de começar, você vai precisar ter instalado em sua máquina:
 -   [Maven](https://maven.apache.org/download.cgi) (gerenciador de dependências)
 -   [MySQL Server](https://dev.mysql.com/downloads/mysql/) (ou outro banco de dados relacional)
 -   Um cliente de banco de dados, como [DBeaver](https://dbeaver.io/) ou [MySQL Workbench](https://www.mysql.com/products/workbench/) (Opcional, mas recomendado)
+
+
 
 #### **1. Configuração do Banco de Dados**
 
@@ -64,6 +76,8 @@ FLUSH PRIVILEGES;
 ```
 **Lembre-se** de substituir `seu_usuario` e `sua_senha` pelos seus dados.
 
+
+
 #### **2. Configuração do Back-end**
 
 Clone ou baixe este repositório e abra o projeto em sua IDE.
@@ -76,6 +90,8 @@ spring.datasource.url=jdbc:mysql://localhost:3306/biblioteca_digital
 spring.datasource.username=seu_usuario
 spring.datasource.password=sua_senha
 ```
+
+
 
 #### **3. Rodando a Aplicação**
 
@@ -92,13 +108,16 @@ mvn spring-boot:run
 ```
 O back-end estará rodando na porta `8080`. Como o front-end está integrado, basta acessar o endereço abaixo no seu navegador.
 
+
+
 #### **4. Acessando o Sistema**
 
 Abra seu navegador e vá para:
 👉 **`http://localhost:8080`**
 
----
 
+
+---
 
 #### **Fluxo de Teste Recomendado:**
 
