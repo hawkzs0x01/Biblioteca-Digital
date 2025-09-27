@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">Biblioteca Digital</div>
+    <div class="nav-links">
+      <a href="#" id="nav-catalog">Catálogo</a>
+      <a href="#" id="nav-reservations" class="hidden">Minhas Reservas</a>
+      <a href="#" id="nav-admin" class="hidden">Gerenciar Acervo</a>
+      <span id="nav-user-greeting" class="hidden"></span>
+      <a href="#" id="nav-login">Login</a>
+      <a href="#" id="nav-register">Registrar</a>
+      <a href="#" id="nav-logout" class="hidden">Sair</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="view-catalog" class="view">
+    <h2>Nosso Acervo</h2>
+    <div class="filter-container">
+      <label for="category-filter">Filtrar por Categoria:</label>
+      <select id="category-filter"></select>
+    </div>
+    <div id="catalog-container" class="book-grid"></div>
+  </section>
+
+  <section id="view-login" class="view hidden">
+    <form id="login-form" class="auth-form">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email" required>
+      <input type="password" id="login-password" placeholder="Senha" required>
+      <button type="submit">Entrar</button>
+      <p id="login-error" class="error-message"></p>
+    </form>
+  </section>
+
+  <section id="view-register" class="view hidden">
+    <form id="register-form" class="auth-form">
+      <h2>Crie sua Conta</h2>
+      <input type="text" id="register-name" placeholder="Nome completo" required>
+      <input type="email" id="register-email" placeholder="Email" required>
+      <input type="tel" id="register-phone" placeholder="Telefone" required>
+      <input type="password" id="register-password" placeholder="Senha" required>
+      <button type="submit">Registrar</button>
+      <p id="register-error" class="error-message"></p>
+    </form>
+  </section>
+
+  <section id="view-my-reservations" class="view hidden">
+    <h2>Minhas Reservas Ativas</h2>
+    <div id="reservations-container"></div>
+    <div id="activation-section" class="admin-extra-tools hidden">
+      <h3>Tornar-se um Bibliotecário</h3>
+      <p>Se você possui uma chave de ativação, insira-a abaixo para ganhar permissões de administrador.</p>
+      <form id="activate-admin-form">
+        <input type="password" id="activate-admin-key" placeholder="Chave Mestra de Ativação" required>
+        <button type="submit">Ativar Permissão</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="view-admin-panel" class="view hidden">
+    <h2>Gerenciamento do Acervo</h2>
+    <button id="btn-add-new-book">Adicionar Novo Livro</button>
+    <div id="admin-book-list"></div>
+  </section>
+</main>
+
+<div id="modal-book-form" class="modal-overlay hidden">
+  <div class="modal-content">
+    <h2 id="modal-title">Adicionar Novo Livro</h2>
+    <form id="book-form">
+      <input type="hidden" id="book-id">
+      <input type="text" id="book-title" placeholder="Título" required>
+      <input type="text" id="book-author" placeholder="Autor" required>
+      <input type="number" id="book-year" placeholder="Ano de Publicação" required>
+      <input type="text" id="book-isbn" placeholder="ISBN" required>
+      <input type="url" id="book-cover-url" placeholder="URL da Capa" required>
+      <input type="number" id="book-quantity" placeholder="Quantidade Disponível" required min="0">
+      <select id="book-category" required></select>
+      <div class="modal-actions">
+        <button type="submit" id="btn-save-book">Salvar</button>
+        <button type="button" id="btn-cancel-book">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Biblioteca Digital. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>
